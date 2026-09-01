@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Análisis SonarQube — todo-api</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 32px; color: #222; }
+    h1 { margin: 0 0 4px; }
+    .sub { color: #555; margin-bottom: 24px; }
+    .qg { display: inline-block; background: #24c18e; color: #fff; padding: 6px 14px; border-radius: 4px; font-weight: bold; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; text-align: center; }
+    .card b { display: block; font-size: 36px; margin-top: 8px; color: #24c18e; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; }
+    th { background: #f4f4f4; }
+  </style>
+</head>
+<body>
+  <h1>SonarQube — proyecto todo-api</h1>
+  <p class="sub">Servidor 9.9.8.100196 · Quality Gate <span class="qg">OK</span> · 137 líneas</p>
+  <div class="grid">
+    <div class="card">Bugs<b>0</b></div>
+    <div class="card">Vulnerabilidades<b>0</b></div>
+    <div class="card">Code smells<b>0</b></div>
+    <div class="card">Security hotspots<b>0</b></div>
+  </div>
+  <table>
+    <tr><th>Métrica</th><th>Valor</th></tr>
+    <tr><td>Reliability rating</td><td>A</td></tr>
+    <tr><td>Security rating</td><td>A</td></tr>
+    <tr><td>Maintainability rating</td><td>A</td></tr>
+    <tr><td>Issues abiertos</td><td>0</td></tr>
+    <tr><td>Hallazgo corregido antes del segundo análisis</td><td>javascript:S5689 — se deshabilitó X-Powered-By en src/index.js</td></tr>
+  </table>
+</body>
+</html>

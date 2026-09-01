@@ -2,6 +2,7 @@ const express = require("express");
 const todosRouter = require("./todos");
 
 const app = express();
+app.disable("x-powered-by");
 const PORT = Number.parseInt(process.env.PORT, 10) || 8080;
 
 app.use(express.json());
