@@ -1,0 +1,39 @@
+2026-08-31  Informe Trivy (sistema de archivos y Dockerfile)
+Proyecto: todo-api
+
+================================================================
+1) Primer escaneo (antes de corregir)
+================================================================
+- package-lock.json (npm): 0 vulnerabilidades
+- Dockerfile: 1 hallazgo LOW
+  DS-0026: Add HEALTHCHECK instruction in your Dockerfile
+
+================================================================
+2) Corrección aplicada
+================================================================
+Se agregó HEALTHCHECK al Dockerfile usando el endpoint /health.
+
+================================================================
+3) Segundo escaneo (después de corregir)
+================================================================
+
+trivy config Dockerfile
+Report Summary
+┌────────────┬────────────┬───────────────────┐
+│   Target   │    Type    │ Misconfigurations │
+├────────────┼────────────┼───────────────────┤
+│ Dockerfile │ dockerfile │         0         │
+└────────────┴────────────┴───────────────────┘
+
+trivy fs --scanners vuln --severity HIGH,CRITICAL .
+Report Summary
+┌───────────────────┬──────┬─────────────────┐
+│      Target       │ Type │ Vulnerabilities │
+├───────────────────┼──────┼─────────────────┤
+│ package-lock.json │ npm  │        0        │
+└───────────────────┴──────┴─────────────────┘
+
+Interpretación:
+No hay vulnerabilidades HIGH/CRITICAL en dependencias npm.
+El único hallazgo del Dockerfile era LOW (falta de HEALTHCHECK) y ya fue corregido.
+Para el escaneo de la imagen construida use: trivy image USUARIO/todo-api:1.0

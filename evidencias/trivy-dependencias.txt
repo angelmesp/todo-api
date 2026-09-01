@@ -1,0 +1,15 @@
+2026-08-31T20:29:37-06:00	INFO	[vuln] Vulnerability scanning is enabled
+2026-08-31T20:29:37-06:00	INFO	Number of language-specific files	num=1
+2026-08-31T20:29:37-06:00	INFO	[npm] Detecting vulnerabilities...
+
+Report Summary
+
+┌───────────────────┬──────┬─────────────────┐
+│      Target       │ Type │ Vulnerabilities │
+├───────────────────┼──────┼─────────────────┤
+│ package-lock.json │ npm  │        0        │
+└───────────────────┴──────┴─────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
